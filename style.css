@@ -1,27 +1,78 @@
-
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  background: #121212;
+  color: #fff;
   scroll-behavior: smooth;
 }
-header, section, footer {
-  padding: 40px 20px;
+
+header {
+  background: #1f1f1f;
   text-align: center;
+  padding: 50px 20px;
 }
-.profile-pic {
+
+header img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   margin-top: 20px;
   border: 3px solid #fff;
-  object-fit: cover;
 }
-h1, h2 {
-  color: #ff3c78;
+
+nav {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
 }
-a {
-  color: #4da6ff;
+
+nav a {
+  color: #fff;
   text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background: #1f1f1f;
+  color: #ccc;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.delay1 { animation-delay: 0.3s; }
+.delay2 { animation-delay: 0.6s; }
+.delay3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

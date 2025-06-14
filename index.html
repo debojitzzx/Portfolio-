@@ -1,24 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Debajit Saha | Portfolio</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Debajit Saha</h1>
-    <p>Freelance Logo Designer | Video Editor | Photo Editor</p>
-    <img src="images/profile.jpg" alt="Profile" class="profile-pic" />
+  <header id="home">
+    <div class="container">
+      <h1 class="fade-in">Debajit Saha</h1>
+      <p class="fade-in delay1">Freelance Logo Designer | Video Editor | Photo Editor</p>
+      <img src="profile.jpg" alt="Debajit Saha" class="fade-in delay2"/>
+    </div>
   </header>
-  <section id="about" data-aos="fade-up">
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="fade-in">
     <h2>About Me</h2>
-    <p>I’m Debajit, a creative Class 12 student doing freelance design & editing.</p>
+    <p>I'm a passionate creative in Class 12. I edit videos, photos, and design logos — always excited to work on new freelance projects!</p>
   </section>
-  <section id="services" data-aos="fade-right">
+
+  <section id="services" class="fade-in delay1">
     <h2>Services</h2>
     <ul>
       <li>Logo Design</li>
@@ -26,27 +35,27 @@
       <li>Photo Editing</li>
     </ul>
   </section>
-  <section id="projects" data-aos="fade-left">
+
+  <section id="projects" class="fade-in delay2">
     <h2>Project Samples</h2>
-    <p>Check my reels on Instagram</p>
     <ul>
-      <li><a href="https://www.instagram.com/reel/DAkmzAQsIM2/">Project 1</a></li>
-      <li><a href="https://www.instagram.com/reel/C_Q5S4BMmDJ/">Project 2</a></li>
-      <li><a href="https://www.instagram.com/reel/DAcrJ22MS9n/">Project 3</a></li>
-      <li><a href="https://www.instagram.com/reel/DHbFYtJx4NW/">Project 4</a></li>
+      <li><a href="https://www.instagram.com/reel/DAkmzAQsIM2/" target="_blank">Reel Project 1</a></li>
+      <li><a href="https://www.instagram.com/reel/C_Q5S4BMmDJ/" target="_blank">Reel Project 2</a></li>
+      <li><a href="https://www.instagram.com/reel/DAcrJ22MS9n/" target="_blank">Reel Project 3</a></li>
+      <li><a href="https://www.instagram.com/reel/DHbFYtJx4NW/" target="_blank">Intro + Project 4</a></li>
     </ul>
   </section>
-  <section id="contact" data-aos="fade-up">
-    <h2>Contact Me</h2>
-    <p>Email: debojitsaha62994@gmail.com</p>
-    <p>Instagram: <a href="https://instagram.com/debojitzzx">@debojitzzx</a></p>
+
+  <section id="contact" class="fade-in delay3">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:debojitsaha62994@gmail.com">debojitsaha62994@gmail.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/debojitzzx" target="_blank">@debojitzzx</a></p>
   </section>
-  <footer data-aos="zoom-in">
+
+  <footer>
     <p>&copy; 2025 Debajit Saha</p>
   </footer>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
