@@ -1,78 +1,91 @@
+
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #121212;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
   color: #fff;
-  scroll-behavior: smooth;
 }
-
 header {
-  background: #1f1f1f;
   text-align: center;
-  padding: 50px 20px;
+  padding: 40px 0;
 }
-
-header img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-top: 20px;
-  border: 3px solid #fff;
-}
-
 nav {
-  background: #000;
+  background: #1e2d3b;
+}
+.nav-container {
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 40px 20px;
-  max-width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
   margin: auto;
+  padding: 10px 20px;
 }
-
-ul {
+.nav-links {
+  display: flex;
   list-style: none;
-  padding-left: 0;
+  gap: 25px;
 }
-
-ul li {
-  margin-bottom: 10px;
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #fff;
 }
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  background: #1f1f1f;
-  color: #ccc;
-}
-
-/* Animations */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-.delay1 { animation-delay: 0.3s; }
-.delay2 { animation-delay: 0.6s; }
-.delay3 { animation-delay: 0.9s; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
   }
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: #1e2d3b;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+}
+section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease-in-out;
+  padding: 40px 20px;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+body.light {
+  background: #ffffff;
+  color: #1a1a1a;
+}
+body.light header {
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  color: #1a1a1a;
+}
+body.light nav {
+  background: #f9f9f9;
+}
+body.light .nav-links a:hover {
+  background: #ddd;
+  color: #000;
+}
+body.light #theme-toggle {
+  color: #203a43;
+  border-color: #203a43;
 }
